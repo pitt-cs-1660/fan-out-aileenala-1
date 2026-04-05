@@ -71,6 +71,6 @@ def lambda_handler(event, context):
                 #         - print the [INVALID] message: print(f"[INVALID] {key} is not a valid image type")
                 print(f"[INVALID] {object_key} is not a valid image type")
                 #         - raise ValueError to trigger DLQ
-                raise ValueError(f"{object_key} is not a valid image type")
+                raise ValueError
 
     return {'statusCode': 200, 'body': 'validation complete'}
